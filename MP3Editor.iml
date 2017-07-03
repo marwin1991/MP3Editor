@@ -9,9 +9,7 @@
         <webroots>
           <root url="file://$MODULE_DIR$/web" relative="/" />
         </webroots>
-        <sourceRoots>
-          <root url="file://$MODULE_DIR$/src" />
-        </sourceRoots>
+        <sourceRoots />
       </configuration>
     </facet>
   </component>
@@ -19,18 +17,42 @@
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="lib" level="project" />
-    <orderEntry type="library" name="mp3spi1.9.5" level="project" />
     <orderEntry type="library" name="lib1" level="project" />
-    <orderEntry type="module" module-name="MpegAudioSPI1.9.5" />
     <orderEntry type="module" module-name="lib" />
-    <orderEntry type="library" name="Maven: com.google.inject:guice:unknown" level="project" />
+    <orderEntry type="module-library">
+      <library name="Maven: it.sauronsoftware.jave:Jave:2.0">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/jave-2.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Maven: org.farng.mp3:jid3lib:0.5.4">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/jid3lib-0.5.4.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Maven: javazoom.jl:JL:unknown">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/MpegAudioSPI1.9.5/lib/jl1.0.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="library" name="lib" level="project" />
   </component>
 </module>

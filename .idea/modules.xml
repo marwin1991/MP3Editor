@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/MP3Editor.iml" filepath="$PROJECT_DIR$/MP3Editor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib/MpegAudioSPI1.9.5/MpegAudioSPI1.9.5.iml" filepath="$PROJECT_DIR$/lib/MpegAudioSPI1.9.5/MpegAudioSPI1.9.5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib/lib.iml" filepath="$PROJECT_DIR$/lib/lib.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre1.8.0_101"/>
+	<classpathentry kind="lib" path="C:/Users/Krzysztof/Desktop/PO/Projekt/MP3_Edytor/lib/controlsfx-8.40.12.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Krzysztof/Desktop/PO/Projekt/MP3_Edytor/lib/jave-1.0.2-src"/>
+	<classpathentry kind="lib" path="C:/Users/Krzysztof/Desktop/PO/Projekt/MP3_Edytor/lib/jave-1.0.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Krzysztof/Desktop/PO/Projekt/MP3_Edytor/lib/MpegAudioSPI1.9.5/lib/jl1.0.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Krzysztof/Desktop/PO/Projekt/MP3_Edytor/lib/MpegAudioSPI1.9.5/mp3spi1.9.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Krzysztof/Desktop/PO/Projekt/MP3_Edytor/lib/MpegAudioSPI1.9.5/lib/tritonus_share.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Krzysztof/Desktop/PO/Projekt/MP3_Edytor/lib/jid3lib-0.5.4.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

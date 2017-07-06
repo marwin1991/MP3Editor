@@ -1,3 +1,3 @@
 TODO:
 - delete file if closed program before end cutting
-- add functionality to decline when cutting in progress -DONE
+- java.nio.BufferOverflowException -  when drop a file it can be connected with waveform

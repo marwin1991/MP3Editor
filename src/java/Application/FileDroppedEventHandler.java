@@ -1,6 +1,6 @@
 package Application;
 
-import java.io.File;
+import Application.Window.Panes.DroppedFileStackPane;
 import Application.Window.TextFields.PathOfFileToCutTextField;
 import javafx.event.EventHandler;
 import javafx.scene.control.Alert;
@@ -8,7 +8,16 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.input.DragEvent;
 import javafx.scene.input.Dragboard;
 
+import java.io.File;
+
 public class FileDroppedEventHandler implements EventHandler<DragEvent>{
+	private MP3Editor mp3Editor;
+	private DroppedFileStackPane droppedFileStackPane;
+	private String tmpPathOfFileToCut;
+	public FileDroppedEventHandler(MP3Editor mp3Editor, DroppedFileStackPane droppedFileStackPane){
+		this.mp3Editor = mp3Editor;
+		this.droppedFileStackPane = droppedFileStackPane;
+	}
 
 	@Override
 	public void handle(DragEvent event) {
@@ -46,16 +55,14 @@ public class FileDroppedEventHandler implements EventHandler<DragEvent>{
                 }
             }
             if(success){
-            	String tmpPathOfFileToCut = db.getFiles().get(0).getAbsolutePath();
-            	PathOfFileToCutTextField.getInstance().setText(tmpPathOfFileToCut);
-            	//System.out.println(tmpPathOfFileToCut);
-				//System.out.println(SavePathTextField.getInstance().getText());
-				MP3Editor.initSlidersAndEnableButtonsWhenFileAppears(tmpPathOfFileToCut);
+            	this.tmpPathOfFileToCut = db.getFiles().get(0).getAbsolutePath();
+            	PathOfFileToCutTextField.getInstance().setText(this.tmpPathOfFileToCut);
+				mp3Editor.initSlidersAndEnableButtonsWhenFileAppears(this.tmpPathOfFileToCut);
             }
         }
-        MP3Editor.root.getChildren().remove(MP3Editor.pane);
+        mp3Editor.removeChildrenFromRoot(this.droppedFileStackPane);
+        mp3Editor.drawWaveform(this.tmpPathOfFileToCut);
         event.consume();
-		
 	}
 
 }

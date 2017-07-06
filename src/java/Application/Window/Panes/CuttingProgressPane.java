@@ -1,7 +1,9 @@
 package Application.Window.Panes;
 
+import Application.MP3Editor;
 import Application.Window.Buttons.CancelCuttingButton;
 import MP3TrimAndInfo.CutThread;
+import MP3TrimAndInfo.EncodeListener;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Font;
@@ -15,8 +17,8 @@ public class CuttingProgressPane extends Pane {
     private CancelCuttingButton cancelCuttingButton;
     private Thread cutThread;
 
-    public CuttingProgressPane(String pathOfFileToCut, double startSecond, double length, boolean saveAsNewFile, File directoryToSave){
-        super.setMinHeight(280);
+    public CuttingProgressPane(String pathOfFileToCut, double startSecond, double length, boolean saveAsNewFile, File directoryToSave, MP3Editor mp3Editor){
+        super.setMinHeight(380);
         super.setMinWidth(680);
         super.setLayoutX(10);
         super.setLayoutY(10);
@@ -37,7 +39,7 @@ public class CuttingProgressPane extends Pane {
 
 
 
-        cutThread = new Thread(new CutThread(pathOfFileToCut, startSecond, length, saveAsNewFile, directoryToSave));
+        cutThread = new Thread(new CutThread(pathOfFileToCut, startSecond, length, saveAsNewFile, directoryToSave, new EncodeListener(this, mp3Editor)));
         this.cancelCuttingButton = new CancelCuttingButton(cutThread, progressBar);
         super.getChildren().addAll(this.progressBar, this.progressBarText, this.cancelCuttingButton);
 

@@ -28,7 +28,7 @@ public class MP3TrimAndInfo {
 		long duration = (long) fileFormat.properties().get("duration");
 		return (int) (duration/(1000*1000));
 	}
-	public static void trim(String path, double offset, double lenght, boolean saveAsNewFile, File directory) throws IOException{
+	public static void trim(String path, double offset, double lenght, boolean saveAsNewFile, File directory, EncodeListener progresslisten) throws IOException{
 		File file = new File (path);
 		File source = file;
 		//File.createTempFile("aaa", "bbb"); // przerobic moze ta procedure na temporayfile
@@ -62,7 +62,6 @@ public class MP3TrimAndInfo {
 		encodAttr.setFormat("mp3");
 		Encoder encoder = new Encoder();
 		try {
-			EncodeListener progresslisten = new EncodeListener();
 			encoder.encode(source, target, encodAttr, progresslisten);
 			if(!saveAsNewFile){
 				Path p1 = source.toPath();
